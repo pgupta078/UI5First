@@ -1,0 +1,12 @@
+{
+	"modelGender": [{
+			"key": "Malek",
+			"gender": "Male"
+
+		}, {
+			"key": "Femalek",
+			"gender": "Female"
+		}
+
+	]
+}

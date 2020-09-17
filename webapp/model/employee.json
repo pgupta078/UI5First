@@ -1,0 +1,29 @@
+{
+	"EmployeeID": [{
+		"tfname": "Tim",
+		"tlname": "Dexter",
+		"tsalary": "4000",
+		"tgender": "M"
+	}, {
+		"tfname": "Kim",
+		"tlname": "Puma",
+		"tsalary": "30000",
+		"tgender": "F"
+	}, {
+		"tfname": "Deborah",
+		"tlname": "Vouris",
+		"tsalary": "36000",
+		"tgender": "F"
+	},
+	 {
+		"tfname": "Giselle",
+		"tlname": "Scallon",
+		"tsalary": "46000",
+		"tgender": "F"
+	},{
+		"tfname": "Maureen",
+		"tlname": "West",
+		"tsalary": "56000",
+		"tgender": "F"
+	}]
+}

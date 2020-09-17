@@ -1,0 +1,77 @@
+<mvc:View controllerName="zfirst.zfirstproject.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<IconTabBar>
+						<items>
+							<IconTabFilter icon="sap-icon://home">
+								<f:SimpleForm backgroundDesign="Translucent" editable="true" singleContainerFullSize="true">
+									<f:content>
+										<Label text="{i18n>fname}" design="Bold" required="true"></Label>
+										<Input id="fname" width="40%" placeholder="{i18n>fnameplace}"></Input>
+										<Label text="{i18n>lname}" design="Bold"></Label>
+										<Input id="lname" width="40%" placeholder="{i18n>lnameplace}"></Input>
+										<Label text="{i18n>email}" design="Bold"></Label>
+										<Input id="email" type="Email" placeholder="{i18n>emailplace}" description="{i18n>emailDesc}"></Input>
+									</f:content>
+								</f:SimpleForm>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://attachment">
+								<f:SimpleForm backgroundDesign="Translucent" editable="true" singleContainerFullSize="true">
+									<f:content>
+										<Label text="{i18n>password}" design="Bold"></Label>
+										<Input id="pwd" type="Password" placeholder="{i18n>passplace}" description="{i18n>passDesc}"></Input>
+										<Label text="{i18n>gender}" design="Bold" required="true"></Label>
+										<ComboBox id="icGender" items="{path:'/modelGender'}" showSecondaryValues="true" width="50%">
+											<core:Item key="{key}" text="{gender}"></core:Item>
+										</ComboBox>
+										<Label text="{i18n>salary}" design="Bold"></Label>
+										<Input id="salary" width="40%" required="true" placeholder="{i18n>salaryplace}" type="Number" description="{i18n>salDesc}"></Input>
+									</f:content>
+								</f:SimpleForm>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://notes">
+								<Table id="Table1" items="{path:'/EmployeeID'}">
+									<columns>
+										<Column>
+											<Label text="{i18n>fname}"></Label>
+										</Column>
+										<Column>
+											<Label text="{i18n>lname}"></Label>
+										</Column>
+										<Column>
+											<Label text="{i18n>salary}"></Label>
+										</Column>
+										<Column>
+											<Label text="{i18n>gender}"></Label>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem type="Navigation" press="onRowClick">
+											<cells>
+												<Text text="{tfname}"></Text>
+												<Text text="{tlname}"></Text>
+												<Text text="{tsalary}"></Text>
+												<Text text="{tgender}"></Text>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="Logon" text="Logon" type="Emphasized" press="onPressLogon"/>
+						<Button id="Press" text="Default" press="onPressDefault"/>
+						<Button id="Accept" icon="sap-icon://action" type="Accept" press="onPressAccept"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
